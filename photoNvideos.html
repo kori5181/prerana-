@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body class="body1">
+    <title>Scrollable Media Collage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .body1
+        {
+            background-color: black;
+        }
+
+        body 
+        {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            overflow-x: hidden;
+        }
+
+        .collage 
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+            grid-auto-rows: 200px; /* Default row height */
+            gap: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .collage video, .collage img 
+        {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures media fills the grid cell */
+            border-radius: 5px;
+        }
+
+        .collage video 
+        {
+            background: #000;
+        }
+        .nigga
+        {
+            color:black;
+        }
+    </style>
+
+
+    <div class="collage">
+        <!-- Videos -->
+        <video controls autoplay muted loop>
+            <source src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\prerana.media\VID1.mp4" type="video/mp4">
+        </video>
+        <video controls autoplay muted loop>
+            <source src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\prerana.media\VID2.mp4" type="video/mp4">
+        </video>
+        <video controls autoplay muted loop>
+            <source src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\prerana.media\VID3.mp4" type="video/mp4">
+        </video>
+        <video controls autoplay muted loop>
+            <source src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\prerana.media\VID 4.mp4" type="video/mp4">
+        </video>
+
+        <!-- Images -->
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g10.jpg" alt="Image 1">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g11.jpg" alt="Image 2">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g12.jpg" alt="Image 3">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g21.jpg" alt="Image 4">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g1.jpeg" alt="Image 5">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g2.jpeg" alt="Image 6">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g3.jpg" alt="Image 7">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g4.jpeg" alt="Image 5">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g5.jpg" alt="Image 6">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g7.jpg" alt="Image 7">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g8.jpeg" alt="Image 8">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g9.jpg" alt="Image 9">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g15.jpg" alt="Image 10">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g16.jpg" alt="Image 11">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g18.jpg" alt="Image 12">
+        <img src="C:\Users\Steve\Desktop\preranawebpage-main-20250319T174756Z-001\preranawebpage-main\g20.jpg" alt="Image 13">
+    </div>
+</body>
+</html>

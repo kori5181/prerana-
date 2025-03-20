@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prerana</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding-top: 120px;
+            background-color: black; /* Set background to black */
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Fixed Navigation Bar */
+        .wrapper {
+            height: 100px;
+            background-color: black;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* Logo */
+        .logo {
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        /* Search Bar */
+        .search {
+            color: white;
+            border-radius: 30px;
+            background-color: black;
+            height: 40px;
+            width: 300px;
+            padding: 0 15px;
+            border: 1px solid red;
+            font-size: medium;
+        }
+
+        /* Dropdown Menu Styles */
+        .wrapper-content {
+            display: flex;
+            gap: 50px;
+            margin-left: 250px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown button {
+            background-color: black;
+            color: red;
+            padding: 10px 15px;
+            border: 1px solid red;
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 15px;
+        }
+
+        .dropdown .content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            color: black;
+            min-width: 150px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .dropdown .content a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .dropdown:hover .content {
+            display: block;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .collage {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .collage video, .collage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .collage video {
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <img class="logo" src="WhatsApp_Image_2025-02-27_at_16.00.15_b85efd61-removebg-preview (1).png" alt="Prerana Logo">
+        <input type="text" class="search" placeholder="Search...">
+        <div class="wrapper-content">
+            <div class="dropdown">
+                <button>Contact</button>
+                <div class="content">
+                    <a href="mailto:prerana@gmail.com">Email</a>
+                    <a href="tel:6282069689">Call Us</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Gallery</button>
+                <div class="content">
+                    <a href="file:///C:/Users/joyal/preranamedia.html">Photo Gallery</a>
+                    <a href="#">Video Gallery</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Donate</button>
+                <div class="content">
+                    <a href="#">Online Donation</a>
+                    <a href="#">Donate Now</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>About Us</button>
+                <div class="content">
+                    <a href="file:///C:/Users/joyal/aboutus.html">Our Founder</a>
+                    <a href="#">Mission & Vision</a>
+                    <a href="#">Awards</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="collage">
+        <video controls autoplay muted loop>
+            <source src="Telegram Desktop/prerana.img6.mp4" type="video/mp4">
+        </video>
+        <video controls autoplay muted loop>
+            <source src="Telegram Desktop/prerana.img2.mp4" type="video/mp4">
+        </video>
+        <video controls autoplay muted loop>
+            <source src="Telegram Desktop/prerana.img4.mp4" type="video/mp4">
+        </video>
+        <video controls autoplay muted loop>
+            <source src="Telegram Desktop/WhatsApp Video 2024-12-04 at 22.42.21_3e63816a.mp4" type="video/mp4">
+        </video>
+
+        <!-- Images -->
+        <img src="google3.jpeg" alt="Image 1">
+        <img src="prerana.img5.jpg" alt="Image 2">
+        <img src="sweets.jpg" alt="Image 3">
+        <img src="img4.jpeg" alt="Image 4">
+        <img src="google1.jpeg" alt="Image 5">
+        <img src="google2.jpeg" alt="Image 6">
+        <img src="google5.jpg" alt="Image 7">
+        <img src="whatsapp21.jpg" alt="Image 5">
+        <img src="google8.jpg" alt="Image 6">
+        <img src="google6.webp" alt="Image 7">
+        <img src="last.jpg" alt="Image 8">
+        <img src="last.jpg" alt="Image 9">
+    </div>
+</body>
+</html>
