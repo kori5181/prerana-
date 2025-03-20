@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Prerana Educational and Charitable Trust</title>
+    <style>
+        :root {
+            --primary-color: #ff0000; /* Red */
+            --secondary-color: #000000; /* Black */
+            --accent-color: #ff0000; /* Red */
+            --text-color: #000000; /* Black */
+            --light-bg: #f8f9fa; /* Light background */
+            --white: #ffffff; /* White */
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: var(--primary-color);
+        }
+        
+        .navbar {
+            background-color: var(--secondary-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--primary-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 18px;
+        }
+
+        .nav-link:hover {
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        .hero-section {
+            position: relative;
+            height: 300px;
+            background-image: url("imdadul-hussain-YiA4wqVpLQQ-unsplash.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(3px);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+        
+        .hero-content h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+        
+        .content-section {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .content-section p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            text-align: justify;
+        }
+        
+        .highlight-box {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .donation-section {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .donation-info {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .donation-highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            display: inline-block;
+        }
+        
+        .trustee-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .trustee-name {
+            font-size: 24px;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .trustee-title {
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        .trustee-org {
+            font-size: 18px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+       
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .contact-card {
+            flex: 1;
+            min-width: 250px;
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-card h3 {
+            color: var(--primary-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #cc0000;
+            text-decoration: none;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .accent-text {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+            
+            .hero-section {
+                height: 200px;
+            }
+            
+            .hero-content h2 {
+                font-size: 24px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .nav-link {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="WhatsApp_Image_2025-02-27_at_16.00.15_b85efd61-removebg-preview (1).png" alt="Prerana Educational and Charitable Trust Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="donate.html" class="nav-link">Donate</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Prerana Educational and Charitable Trust</h2>
+            <p>Transforming Lives Since 2011</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content-section">
+            <h2>About Prerana Educational and Charitable Trust</h2>
+            
+            <p>Established in the year 2011, Prerana Educational and Charitable Trust is a registered non-profit organization under the Indian Registration Trust Act of 1882. The trust is also recognized under Section 80G and Section 12A of the Income Tax Act, 1961, which allows donors to claim tax exemptions on their contributions. Additionally, Prerana is approved for Corporate Social Responsibility (CSR) activities under the Companies Act, 2013, making it an ideal partner for organizations looking to fulfill their CSR obligations.</p>
+            
+            <p>Driven by a humanitarian vision, Prerana Educational and Charitable Trust is committed to uplifting underprivileged communities and transforming the lives of homeless and destitute individuals. As a voluntary non-governmental organization (NGO), our primary mission is to bring about social and qualitative change in the lives of those in need by providing essential support, education, shelter, and other welfare initiatives.</p>
+            
+            <p>We actively run various welfare and rehabilitation projects aimed at supporting homeless individuals, economically disadvantaged families, and marginalized sections of society. Our programs focus on areas such as education, healthcare, skill development, and food distribution, ensuring sustainable and long-term solutions for those in desperate need.</p>
+            
+            <div class="highlight-box">
+                <p><strong>All donations made to Prerana Sewa Sansthan are eligible for tax exemption under Section 80G of the Income Tax Act, 1961, in India.</strong> We sincerely encourage generous contributions to support our noble cause.</p>
+            </div>
+        </div>
+        
+        <div class="donation-section">
+            <h2>Support Our Cause</h2>
+            <p class="donation-info"><strong>For donations, please make payments in favor of:</strong></p>
+            <p class="donation-highlight">Prerana Sewa Sansthan</p>
+            <p class="donation-highlight">PAN Number: AABTP9900B</p>
+            <p>For more details and to learn how you can contribute, please visit our website:</p>
+            <a href="http://www.Prernasewa.org" target="_blank" class="cta-button">www.Prernasewa.org</a>
+            <p>or contact us at <strong>+91 98910 69636</strong></p>
+            <p class="accent-text">Together, we can make a difference in the lives of the less fortunate.</p>
+        </div>
+        
+        <div class="trustee-section">
+            <h2 class="trustee-name">VAIBHAV BIRADAR</h2>
+            <p class="trustee-title">(Managing Trustee)</p>
+            <p class="trustee-org">Prerna Sewa Sansthan</p>
+        </div>
+        
+        <div class="contact-section">
+            <div class="contact-card">
+                <h3>Central Office</h3>
+                <div class="contact-info">
+                    <p>D-152, Sector-23,</p>
+                    <p>Sanjay Nagar, Ghaziabad - 201002,</p>
+                    <p>Uttar Pradesh, India</p>
+                    <p><strong>Mobile:</strong> +91 98910 69636</p>
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <h3>Get in Touch</h3>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:PrernaSewa2007@gmail.com">PrernaSewa2007@gmail.com</a></p>
+                    <p><strong>Website:</strong> <a href="http://www.Prernasewa.org" target="_blank">www.Prernasewa.org</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Prerana Educational and Charitable Trust. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
